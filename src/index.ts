@@ -1,5 +1,5 @@
 import type { ESLint } from "eslint";
-import packageJson from "../package.json";
+import packageJson from "../package.json" with { type: "json" };
 
 const plugin = {
 	meta: {

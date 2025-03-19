@@ -1,0 +1,24 @@
+{
+  "name": "eslint-plugin-no-next-restricted",
+  "version": "0.0.1",
+  "type": "commonjs",
+  "description": "ESLint plugin to customize restrictions on Next.js imports like next/link and next/image.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "next.js"
+  ],
+  "author": "apple-yagi",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  },
+  "packageManager": "pnpm@10.6.5"
+}

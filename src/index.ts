@@ -1,5 +1,6 @@
 import type { ESLint } from "eslint";
 import packageJson from "../package.json" with { type: "json" };
+import { noNextImage } from "./rules/no-next-image.ts";
 import { noNextLink } from "./rules/no-next-link.ts";
 
 const plugin = {
@@ -9,6 +10,7 @@ const plugin = {
 	},
 	rules: {
 		"no-next-link": noNextLink,
+		"no-next-image": noNextImage,
 	},
 	configs: {
 		recommended: {
@@ -22,6 +24,7 @@ const plugin = {
 			plugins: ["no-next-restricted"],
 			rules: {
 				"no-next-restricted/no-next-link": "error",
+				"no-next-restricted/no-next-image": "error",
 			},
 		},
 	},

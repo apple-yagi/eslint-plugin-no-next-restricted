@@ -5,6 +5,7 @@
   "description": "ESLint plugin to customize restrictions on Next.js imports like next/link and next/image.",
   "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
     "lint": "pnpm run \"/^lint:.*/\"",
     "lint:biome": "biome check --write",
     "lint:tsc": "tsc --noEmit",

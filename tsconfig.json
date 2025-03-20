@@ -1,31 +1,12 @@
 {
-  "include": ["src", "package.json"],
-  "exclude": ["src/**/*.test.ts", "src/__tests__"],
-  "compilerOptions": {
-    "target": "ES2022",
-    "lib": ["ESNext"],
-    "module": "NodeNext",
-    "composite": true,
-    "outDir": "dist",
-    "sourceMap": true,
-    "declarationMap": true,
-    "incremental": true,
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noUnusedLocals": false,
-    "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": true,
-    "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "allowUnusedLabels": false,
-    "allowUnreachableCode": false,
-    "skipLibCheck": true
-  }
+	"extends": "./tsconfig.base.json",
+	"include": ["src", "package.json"],
+	"exclude": ["src/**/*.test.ts", "src/__tests__"],
+	"compilerOptions": {
+		"target": "ES2022",
+		"lib": ["ESNext"],
+		"module": "NodeNext",
+		"allowImportingTsExtensions": true,
+		"emitDeclarationOnly": true
+	}
 }

@@ -12,19 +12,13 @@
 		"lint:tsc": "tsc --noEmit",
 		"test": "node --experimental-strip-types --test src/**/*.test.ts"
 	},
-	"keywords": [
-		"eslint",
-		"eslint-plugin",
-		"next.js"
-	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"keywords": ["eslint", "eslint-plugin", "next.js"],
 	"author": "apple-yagi",
 	"license": "MIT",
-	"files": [
-		"src",
-		"!src/**/*.test.ts",
-		"!src/__tests__",
-		"dist"
-	],
+	"files": ["src", "!src/**/*.test.ts", "!src/__tests__", "dist"],
 	"engines": {
 		"node": ">=22.0.0"
 	},
@@ -40,9 +34,6 @@
 		"typescript": "^5.8.2"
 	},
 	"pnpm": {
-		"onlyBuiltDependencies": [
-			"@biomejs/biome",
-			"lefthook"
-		]
+		"onlyBuiltDependencies": ["@biomejs/biome", "lefthook"]
 	}
 }

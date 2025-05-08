@@ -1,6 +1,6 @@
 {
 	"name": "eslint-plugin-no-next-restricted",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"type": "module",
 	"description": "ESLint plugin to customize restrictions on Next.js imports like next/link and next/image.",
 	"main": "dist/index.js",
@@ -20,10 +20,19 @@
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
 	},
-	"keywords": ["eslint", "eslint-plugin", "next.js"],
+	"keywords": [
+		"eslint",
+		"eslint-plugin",
+		"next.js"
+	],
 	"author": "apple-yagi",
 	"license": "MIT",
-	"files": ["src", "!src/**/*.test.ts", "!src/__tests__", "dist"],
+	"files": [
+		"src",
+		"!src/**/*.test.ts",
+		"!src/__tests__",
+		"dist"
+	],
 	"engines": {
 		"node": ">=22.0.0"
 	},
@@ -39,6 +48,9 @@
 		"typescript": "^5.8.2"
 	},
 	"pnpm": {
-		"onlyBuiltDependencies": ["@biomejs/biome", "lefthook"]
+		"onlyBuiltDependencies": [
+			"@biomejs/biome",
+			"lefthook"
+		]
 	}
 }

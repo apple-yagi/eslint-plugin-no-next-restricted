@@ -10,6 +10,7 @@
 		"lint": "pnpm run \"/^lint:.*/\"",
 		"lint:biome": "biome check --write",
 		"lint:tsc": "tsc --noEmit",
+		"ci": "biome check && pnpm run build && pnpm run test",
 		"test": "node --experimental-strip-types --test src/**/*.test.ts"
 	},
 	"repository": {
@@ -20,19 +21,10 @@
 		"access": "public",
 		"registry": "https://registry.npmjs.org/"
 	},
-	"keywords": [
-		"eslint",
-		"eslint-plugin",
-		"next.js"
-	],
+	"keywords": ["eslint", "eslint-plugin", "next.js"],
 	"author": "apple-yagi",
 	"license": "MIT",
-	"files": [
-		"src",
-		"!src/**/*.test.ts",
-		"!src/__tests__",
-		"dist"
-	],
+	"files": ["src", "!src/**/*.test.ts", "!src/__tests__", "dist"],
 	"engines": {
 		"node": ">=22.0.0"
 	},
@@ -48,9 +40,6 @@
 		"typescript": "^5.8.2"
 	},
 	"pnpm": {
-		"onlyBuiltDependencies": [
-			"@biomejs/biome",
-			"lefthook"
-		]
+		"onlyBuiltDependencies": ["@biomejs/biome", "lefthook"]
 	}
 }

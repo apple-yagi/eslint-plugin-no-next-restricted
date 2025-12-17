@@ -27,7 +27,8 @@ Or configure rules individually:
   "rules": {
     "no-next-restricted/no-next-link": "error",
     "no-next-restricted/no-next-image": "error",
-    "no-next-restricted/no-next-form": "error"
+    "no-next-restricted/no-next-form": "error",
+    "no-next-restricted/no-next-font": "error"
   }
 }
 ```
@@ -39,6 +40,7 @@ Or configure rules individually:
 | `no-next-restricted/no-next-link` | Disallow `next/link` | `error` (recommended) | `Do not use next/link. Use <a> instead.` |
 | `no-next-restricted/no-next-image` | Disallow `next/image` | `error` (recommended) | `Do not use next/image. Use <img> instead.` |
 | `no-next-restricted/no-next-form` | Disallow `next/form` | `error` (recommended) | `Do not use next/form. Use <form> instead.` |
+| `no-next-restricted/no-next-font` | Disallow `next/font` (including subpaths) | `error` (recommended) | `Do not use next/font. Use CSS fonts instead.` |
 
 ## Notes
 

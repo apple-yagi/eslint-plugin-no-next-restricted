@@ -1,20 +1,14 @@
-name: Release
+name: CI
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
 
-permissions:
-  id-token: write # Required for provenance
-  contents: write # Required for changesets/action
-  pull-requests: write # Required for changesets/action
-
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
-  release:
-    name: Release
+  ci:
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6

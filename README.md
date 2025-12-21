@@ -10,28 +10,42 @@ pnpm add -D eslint eslint-plugin-no-next-restricted
 
 ## Usage
 
-Enable the plugin and the recommended config:
+Enable the plugin and the recommended config with ESLint 9 flat config:
 
-```json
-{
-  "plugins": ["no-next-restricted"],
-  "extends": ["plugin:no-next-restricted/recommended"]
-}
+```js
+// eslint.config.js
+import noNextRestricted from "eslint-plugin-no-next-restricted";
+
+export default [
+  {
+    plugins: { 
+      "no-next-restricted": noNextRestricted
+    },
+    rules: noNextRestricted.configs.recommended.rules,
+  },
+];
 ```
 
 Or configure rules individually:
 
-```json
-{
-  "plugins": ["no-next-restricted"],
-  "rules": {
-    "no-next-restricted/no-next-link": "error",
-    "no-next-restricted/no-next-image": "error",
-    "no-next-restricted/no-next-form": "error",
-    "no-next-restricted/no-next-font": "error",
-    "no-next-restricted/no-next-script": "error"
-  }
-}
+```js
+// eslint.config.js
+import noNextRestricted from "eslint-plugin-no-next-restricted";
+
+export default [
+  {
+    plugins: { 
+      "no-next-restricted": noNextRestricted
+    },
+    rules: {
+      "no-next-restricted/no-next-link": "error",
+      "no-next-restricted/no-next-image": "error",
+      "no-next-restricted/no-next-form": "error",
+      "no-next-restricted/no-next-font": "error",
+      "no-next-restricted/no-next-script": "error",
+    },
+  },
+];
 ```
 
 ## Rules
@@ -42,7 +56,7 @@ Or configure rules individually:
 | `no-next-restricted/no-next-image` | Disallow `next/image` | `error` (recommended) | `Do not use next/image. Use <img> instead.` |
 | `no-next-restricted/no-next-form` | Disallow `next/form` | `error` (recommended) | `Do not use next/form. Use <form> instead.` |
 | `no-next-restricted/no-next-font` | Disallow `next/font` (including subpaths) | `error` (recommended) | `Do not use next/font. Use CSS fonts instead.` |
-| `no-next-restricted/no-next-script` | Disallow `next/script` | `error` (recommended) | `Do not use next/script. Use standard <script> instead.` |
+| `no-next-restricted/no-next-script` | Disallow `next/script` | `off` (not in recommended) | `Do not use next/script. Use standard <script> instead.` |
 
 ## Notes
 

@@ -4,7 +4,7 @@ export const noNextScript: Rule.RuleModule = {
 	meta: {
 		type: "problem",
 		docs: {
-			recommended: true,
+			recommended: false,
 			description: "Disallow usage of next/script",
 		},
 	},

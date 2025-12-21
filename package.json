@@ -1,57 +1,61 @@
 {
-	"name": "eslint-plugin-no-next-restricted",
-	"version": "0.2.1",
-	"type": "module",
-	"description": "ESLint plugin to customize restrictions on Next.js imports like next/link and next/image.",
-	"main": "dist/index.js",
-	"scripts": {
-		"build": "tsc",
-		"release": "changeset publish",
-		"lint": "pnpm run \"/^lint:.*/\"",
-		"lint:biome": "biome check --write",
-		"lint:tsc": "tsc --noEmit",
-		"ci": "biome check && pnpm run build && pnpm run test",
-		"test": "node --experimental-strip-types --test src/**/*.test.ts"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/apple-yagi/eslint-plugin-no-next-restricted.git"
-	},
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org/"
-	},
-	"keywords": [
-		"eslint",
-		"eslint-plugin",
-		"next.js"
-	],
-	"author": "apple-yagi",
-	"license": "MIT",
-	"files": [
-		"src",
-		"!src/**/*.test.ts",
-		"!src/__tests__",
-		"dist"
-	],
-	"engines": {
-		"node": ">=22.0.0"
-	},
-	"peerDependencies": {
-		"eslint": ">=9.0.0"
-	},
-	"packageManager": "pnpm@10.6.5",
-	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@changesets/cli": "^2.28.1",
-		"@types/node": "^22.13.10",
-		"lefthook": "^1.11.3",
-		"typescript": "^5.8.2"
-	},
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"@biomejs/biome",
-			"lefthook"
-		]
-	}
+  "name": "eslint-plugin-no-next-restricted",
+  "version": "0.2.1",
+  "description": "ESLint plugin to customize restrictions on Next.js imports like next/link and next/image.",
+  "keywords": [
+    "eslint",
+    "eslint-plugin",
+    "next.js"
+  ],
+  "license": "MIT",
+  "author": "apple-yagi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apple-yagi/eslint-plugin-no-next-restricted.git"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!src/__tests__",
+    "!src/**/*.test.ts"
+  ],
+  "type": "module",
+  "main": "dist/index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "build": "tsc",
+    "release": "changeset publish",
+    "format": "oxfmt",
+    "format:check": "pnpm run format --check",
+    "lint": "pnpm run lint:check --fix",
+    "lint:check": "oxlint --deny-warnings --type-aware --type-check --report-unused-disable-directives",
+    "ci": "pnpm run format:check && pnpm run lint:check && pnpm run build && pnpm run test",
+    "test": "node --experimental-strip-types --test src/**/*.test.ts"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.28.1",
+    "@types/node": "^22.13.10",
+    "lefthook": "^1.11.3",
+    "oxfmt": "^0.19.0",
+    "oxlint": "^1.34.0",
+    "oxlint-tsgolint": "^0.10.0",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=9.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "packageManager": "pnpm@10.6.5",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "oxfmt",
+      "oxlint",
+      "lefthook"
+    ]
+  }
 }

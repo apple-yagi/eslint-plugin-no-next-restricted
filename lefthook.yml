@@ -1,10 +1,11 @@
 pre-commit:
   parallel: true
   commands:
-    biome:
-      glob: '*.{js,ts,jsx,tsx,json}'
-      run: pnpm run lint:biome {staged_files}
+    oxfmt:
+      glob: "**"
+      run: pnpm run format {staged_files}
       stage_fixed: true
-    typescript:
-      glob: '*.{ts,tsx}'
-      run: pnpm run lint:tsc
+    oxlint:
+      glob: "*.{js,ts}"
+      run: pnpm run lint {staged_files}
+      stage_fixed: true

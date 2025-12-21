@@ -18,7 +18,7 @@ import noNextRestricted from "eslint-plugin-no-next-restricted";
 
 export default [
   {
-    plugins: { 
+    plugins: {
       "no-next-restricted": noNextRestricted
     },
     rules: noNextRestricted.configs.recommended.rules,
@@ -34,7 +34,7 @@ import noNextRestricted from "eslint-plugin-no-next-restricted";
 
 export default [
   {
-    plugins: { 
+    plugins: {
       "no-next-restricted": noNextRestricted
     },
     rules: {
@@ -50,13 +50,13 @@ export default [
 
 ## Rules
 
-| Rule ID | Purpose | Default | Message example |
-| --- | --- | --- | --- |
-| `no-next-restricted/no-next-link` | Disallow `next/link` | `error` (recommended) | `Do not use next/link. Use <a> instead.` |
-| `no-next-restricted/no-next-image` | Disallow `next/image` | `error` (recommended) | `Do not use next/image. Use <img> instead.` |
-| `no-next-restricted/no-next-form` | Disallow `next/form` | `error` (recommended) | `Do not use next/form. Use <form> instead.` |
-| `no-next-restricted/no-next-font` | Disallow `next/font` (including subpaths) | `error` (recommended) | `Do not use next/font. Use CSS fonts instead.` |
-| `no-next-restricted/no-next-script` | Disallow `next/script` | `off` (not in recommended) | `Do not use next/script. Use standard <script> instead.` |
+| Rule ID                             | Purpose                                   | Default                    | Message example                                          |
+| ----------------------------------- | ----------------------------------------- | -------------------------- | -------------------------------------------------------- |
+| `no-next-restricted/no-next-link`   | Disallow `next/link`                      | `error` (recommended)      | `Do not use next/link. Use <a> instead.`                 |
+| `no-next-restricted/no-next-image`  | Disallow `next/image`                     | `error` (recommended)      | `Do not use next/image. Use <img> instead.`              |
+| `no-next-restricted/no-next-form`   | Disallow `next/form`                      | `error` (recommended)      | `Do not use next/form. Use <form> instead.`              |
+| `no-next-restricted/no-next-font`   | Disallow `next/font` (including subpaths) | `error` (recommended)      | `Do not use next/font. Use CSS fonts instead.`           |
+| `no-next-restricted/no-next-script` | Disallow `next/script`                    | `off` (not in recommended) | `Do not use next/script. Use standard <script> instead.` |
 
 ## Notes
 

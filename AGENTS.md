@@ -10,14 +10,14 @@
 
 - Install: `pnpm install` (Node >= 22). The repo uses pnpm workspaces settings via `pnpm-lock.yaml`.
 - Build: `pnpm build` runs `tsc` to emit ESM to `dist/`.
-- Lint: `pnpm lint` executes all lint tasks; `pnpm lint:biome` formats/lints with Biome (auto-fix enabled), `pnpm lint:tsc` type-checks without emitting.
+- Lint: `pnpm lint` runs Oxlint with `--fix` and denies warnings/type-checks; `pnpm lint:check` runs the same without fixing; formatting is `pnpm format` (with `pnpm format:check` for CI-style checks).
 - Test: `pnpm test` runs the Node test runner with `--experimental-strip-types` against `src/**/*.test.ts`.
 - Release (maintainers): `pnpm release` calls `changeset publish`; create a changeset when altering public behavior.
 
 ## Coding Style & Naming Conventions
 
 - Language: TypeScript with ESM (`"type": "module"`); JSON imports use `with { type: "json" }`.
-- Formatting: Biome governs spacing, imports, and lint rules; run `pnpm lint:biome` before sending a PR. Default indentation is tabs as enforced by Biome formatting.
+- Formatting: Oxfmt governs spacing and imports with tabs (`useTabs` in `.oxfmtrc.json`); run `pnpm lint:oxfmt` before sending a PR. Oxlint enforces lint rules via `pnpm lint:oxlint`.
 - Exports: Default export for the plugin object; individual rules are named exports (`noNextLink`, etc.). Keep rule IDs kebab-case and test files named `*.test.ts`.
 
 ## Testing Guidelines

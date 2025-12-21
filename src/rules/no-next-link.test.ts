@@ -6,8 +6,8 @@ const config: Linter.Config = {
   rules: { "no-next-restricted/no-next-link": "error" },
 };
 
-describe("no-next-link", () => {
-  it("should report error when using next/link", async (t: TestContext) => {
+void describe("no-next-link", () => {
+  void it("should report error when using next/link", async (t: TestContext) => {
     const eslint = createESLint(config);
     const code = `
 			import Link from "next/link";
@@ -32,7 +32,7 @@ describe("no-next-link", () => {
     ]);
   });
 
-  it("should not report error when not using next/link", async (t: TestContext) => {
+  void it("should not report error when not using next/link", async (t: TestContext) => {
     const eslint = createESLint(config);
     const code = `
 			import Link from "react-router";

@@ -6,8 +6,8 @@ const config: Linter.Config = {
   rules: { "no-next-restricted/no-next-script": "error" },
 };
 
-describe("no-next-script", () => {
-  it("should report error when using next/script", async (t: TestContext) => {
+void describe("no-next-script", () => {
+  void it("should report error when using next/script", async (t: TestContext) => {
     const eslint = createESLint(config);
     const code = `
 			import Script from 'next/script'
@@ -38,7 +38,7 @@ describe("no-next-script", () => {
     ]);
   });
 
-  it("should not report error when not using next/script", async (t: TestContext) => {
+  void it("should not report error when not using next/script", async (t: TestContext) => {
     const eslint = createESLint(config);
     const code = `
 			import Script from './script'

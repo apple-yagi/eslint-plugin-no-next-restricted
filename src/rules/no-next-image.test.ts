@@ -6,8 +6,8 @@ const config: Linter.Config = {
   rules: { "no-next-restricted/no-next-image": "error" },
 };
 
-describe("no-next-image", () => {
-  it("should report error when using next/image", async (t: TestContext) => {
+void describe("no-next-image", () => {
+  void it("should report error when using next/image", async (t: TestContext) => {
     const eslint = createESLint(config);
     const code = `
       import Image from "next/image";
@@ -32,7 +32,7 @@ describe("no-next-image", () => {
     ]);
   });
 
-  it("should not report error when not using next/image", async (t: TestContext) => {
+  void it("should not report error when not using next/image", async (t: TestContext) => {
     const eslint = createESLint(config);
     const code = `
       export const Component = () => <img src="/image.png" />;

@@ -6,8 +6,8 @@ const config: Linter.Config = {
   rules: { "no-next-restricted/no-next-font": "error" },
 };
 
-describe("no-next-font", () => {
-  it("should report error when using next/font", async (t: TestContext) => {
+void describe("no-next-font", () => {
+  void it("should report error when using next/font", async (t: TestContext) => {
     const eslint = createESLint(config);
     const code = `
 			import { Inter } from 'next/font/google'
@@ -43,7 +43,7 @@ describe("no-next-font", () => {
     ]);
   });
 
-  it("should not report error when not using next/font", async (t: TestContext) => {
+  void it("should not report error when not using next/font", async (t: TestContext) => {
     const eslint = createESLint(config);
     const code = `
 			import Font from "./font-loader";

@@ -1,5 +1,11 @@
 # eslint-plugin-no-next-restricted
 
+## 0.2.1
+
+### Patch Changes
+
+- 8137a5e: Remove no-next-script from recommended
+
 ## 0.2.0
 
 ### Minor Changes

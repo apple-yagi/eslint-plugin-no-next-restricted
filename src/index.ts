@@ -33,7 +33,7 @@ const plugin = {
 				"no-next-restricted/no-next-image": "error",
 				"no-next-restricted/no-next-form": "error",
 				"no-next-restricted/no-next-font": "error",
-				"no-next-restricted/no-next-script": "error",
+				"no-next-restricted/no-next-script": "off",
 			},
 		},
 	},
